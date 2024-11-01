@@ -13,7 +13,7 @@ def index():
 def biomarkers():
 
     # Load the Excel file and process data
-    file_path = '/media/samantha/disk2/DriveD/Python/flasktest-main/data/biomarkers.xlsx'
+    file_path = '/data/biomarkers.xlsx'
     df = pd.read_excel(file_path)
 
 # Convert data into a dictionary where biomarkers map to their applicable disorders
