@@ -12,7 +12,9 @@ def index():
 @app.route('/biomarkers', methods=['GET', 'POST'])
 def biomarkers():
     # Load the Excel file and process data
+
     file_path = '/media/samantha/disk2/DriveD/Python/flasktest-main/bio_markers/data/biomarkers_new.xlsx'
+
     df = pd.read_excel(file_path)
 
     # Convert data into a dictionary where biomarkers map to their applicable disorders and associated details
@@ -73,8 +75,10 @@ def biomarkers():
 # Bio_M_Skills selection route
 @app.route('/skills', methods=['GET', 'POST'])
 def skills():
+
     # Load the Excel file and process data
     file_path = '/media/samantha/disk2/DriveD/Python/flasktest-main/bio_markers/data/Cognitive_skills.xlsx'
+
     df = pd.read_excel(file_path)
 
     # Convert data into a dictionary where Bio_M_Skills map to their applicable cognitive impairments
@@ -124,8 +128,10 @@ def skills():
 # Bio_M_Skills selection route
 @app.route('/cognitive', methods=['GET', 'POST'])
 def cognitive():
+
     # Load the Excel file and process data
     file_path = '/media/samantha/disk2/DriveD/Python/flasktest-main/bio_markers/data/Cognitive_Skills_Data.xlsx'
+
     df = pd.read_excel(file_path)
 
     # Convert data into a dictionary where Bio_M_Skills map to their applicable disorders and biomarkers
