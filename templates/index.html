@@ -7,111 +7,129 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
             padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
+            color: #007bff;
+        }
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
             margin-bottom: 20px;
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .guide {
+            background-color: #e9f7fd;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            border-radius: 5px;
+            margin-bottom: 30px;
         }
-        .biomarker-row {
-            display: flex;
-            align-items: center;
+        .guide h2 {
+            font-size: 1.2em;
             margin-bottom: 10px;
+            color: #007bff;
         }
-        .biomarker-input {
-            width: 100%;
-            padding: 8px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-right: 10px;
+        .guide p {
+            margin: 0;
+            color: #333;
         }
-        button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .add-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 20px;
-            line-height: 16px;
-        }
-        .add-btn:hover {
-            background-color: #0056b3;
-        }
-        .selected-biomarkers {
+        .link-section {
             display: flex;
             flex-direction: column;
-            margin-top: 20px;
+            gap: 20px;
         }
-        .biomarker-item {
+        .link-card {
             display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            background-color: #f9f9f9;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fdfdfd;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        .biomarker-item button {
-            margin-left: 10px;
-            background-color: #dc3545;
-            color: white;
-            border: none;
-            padding: 4px 8px;
-            cursor: pointer;
-            border-radius: 4px;
+        .link-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #333;
         }
-        .add-destination {
+        .link-card p {
+            margin: 0 0 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .link-card a {
+            text-decoration: none;
             color: #007bff;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-        .add-destination span {
-            margin-left: 5px;
+        .link-card a:hover {
+            color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Biomarker to Disorders Mapping</h1>
+        <p>Explore how biomarkers relate to various disorders and skills through our interactive tools.</p>
 
-    
-            <div class="biomarker-row">
-        
-                <div></div>
-                    <a href="/biomarkers">Visit biomarkers</a>
-                </div>
-               
-                <div></div>
-                    <a href="/skills">Visit skills</a>  
-              
-               
-                <div>
-                    <a href="/cognitive">Visit Cognitive biomarkers</a>  
-                </div>
+        <div class="guide">
+            <h2>User Guide</h2>
+            <p>
+                Use the links below to explore different aspects of biomarker data. Click on each section to:
+                <ul>
+                    <li>View biomarker-disorder relationships</li>
+                    <li>Analyze skill-related biomarkers</li>
+                    <li>Dive into cognitive biomarkers mapping</li>
+                </ul>
+            </p>
+        </div>
 
+        <div class="link-section">
+            <!-- Biomarkers Link -->
+            <div class="link-card">
+                <h3>Biomarkers</h3>
+                <p>Explore the relationships between various biomarkers and their associated disorders.</p>
+                <a href="/biomarkers">Visit Biomarkers</a>
             </div>
 
+            <!-- Skills Link -->
+            <div class="link-card">
+                <h3>Skills</h3>
+                <p>Discover how specific biomarkers are linked to cognitive and motor skills.</p>
+                <a href="/skills">Visit Skills</a>
+            </div>
+
+            <!-- Cognitive Biomarkers Link -->
+            <div class="link-card">
+                <h3>Cognitive Biomarkers</h3>
+                <p>Delve deeper into cognitive biomarkers and their applications in neuroscience.</p>
+                <a href="/cognitive">Visit Cognitive Biomarkers</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 CANE Biomarker App. All rights reserved.
+    </footer>
 </body>
 </html>

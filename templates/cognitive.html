@@ -100,7 +100,7 @@
         <a href="/">Back</a>
     </div>
     <div class="container">
-        <h1>Biomarker to Disorders Mapping</h1>
+        <h1>Cognitive Skills impairement to Disorders Mapping</h1>
 
         <!-- Biomarker Form -->
         <form id="biomarkerForm" method="POST">
@@ -125,14 +125,25 @@
         </form>
 
         <!-- Display Associated Disorders -->
-        {% if disorders %}
-        <h2>Associated Disorder/s:</h2>
-        <ul>
-            {% for disorder in disorders %}
-            <li>{{ disorder }}</li>
+        <table>
+            <tr>
+                <th>Disorder</th>
+                <th>Associated Biomarkers (by Skill)</th>
+            </tr>
+            {% for item in disorders_with_biomarkers %}
+            <tr>
+                <td>{{ item.disorder }}</td>
+                <td>
+                    <ul>
+                        {% for skill, biomarkers in item.biomarkers.items() %}
+                        <li><strong>{{ skill }}:</strong> {{ biomarkers }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
             {% endfor %}
-        </ul>
-        {% endif %}
+        </table>
+        
     </div>
 
     <script>
